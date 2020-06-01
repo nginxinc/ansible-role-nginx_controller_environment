@@ -1,0 +1,8 @@
+---
+# vars file for ansible-role-nginx_controller_environment
+
+# nginx_controller_environment:
+#   metadata:
+#     name:  # the short name of the environment (alpha numeric characters only)
+#     displayName:   # a friendly display name for the environment (spaces and special characters allowed)
+#     description:  # a description of the environment
