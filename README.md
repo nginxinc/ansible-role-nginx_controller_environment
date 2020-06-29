@@ -36,8 +36,6 @@ To use this role you can create a playbook such as the following (let's name it 
   gather_facts: no
 
   vars:
-    nginx_controller_user_email: "user@example.com"
-    nginx_controller_user_password: "mySecurePassword"
     nginx_controller_fqdn: "controller.mydomain.com"
     nginx_controller_validate_certs: false
 
@@ -59,7 +57,7 @@ To use this role you can create a playbook such as the following (let's name it 
 
 You can then run `ansible-playbook nginx_controller_environment.yaml` to execute the playbook.
 
-Alternatively, you can also pass/override any variables at run time using the `--extra-vars` or `-e` flag like so `ansible-playbook nginx_controller_environment.yaml -e "nginx_controller_user_email=user@company.com nginx_controller_user_password=notsecure nginx_controller_fqdn=controller.example.local nginx_controller_validate_certs=false"`
+Alternatively, you can also pass/override any variables at run time using the `--extra-vars` or `-e` flag like so `ansible-playbook nginx_controller_environment.yaml nginx_controller_fqdn=controller.example.local nginx_controller_validate_certs=false"`
 
 You can also pass/override any variables by passing a `yaml` file containing any number of variables like so `ansible-playbook nginx_controller_environment.yaml -e "@nginx_controller_environment_vars.yaml"`
 
