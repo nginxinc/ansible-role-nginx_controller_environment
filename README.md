@@ -36,8 +36,8 @@ To use this role you can create a playbook such as the following (let's name it 
   gather_facts: no
 
   vars:
-    nginx_controller_user_email: "user@example.com"
-    nginx_controller_user_password: "mySecurePassword"
+    nginx_controller_user_email: "user@example.com" # Required by nginx_controller_generate_token role
+    nginx_controller_user_password: "mySecurePassword" # Required by nginx_controller_generate_token role
     nginx_controller_fqdn: "controller.mydomain.com"
     nginx_controller_validate_certs: false
 
