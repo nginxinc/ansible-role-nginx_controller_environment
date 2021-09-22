@@ -1,0 +1,18 @@
+---
+- name: Converge
+  hosts: controllers
+
+  vars:
+    nginx_controller_validate_certs: false
+    nginx_controller_fqdn: mock-server.molecule-test:1080
+    nginx_controller_auth_token: "ABC123"
+    nginx_controller_environment:
+      metadata:
+        name: "production"
+        displayName: "Production environment"
+        description: "Production environment"
+
+  tasks:
+    - name: Call Environment Role
+      include_role:
+        name: ansible-role-nginx_controller_environment
